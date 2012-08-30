@@ -14,6 +14,8 @@ sockets = PORT_RANGE.map do |port|
   begin
     socket.connect_nonblock(remote_addr)
   rescue Errno::EINPROGRESS
+    # EINPROGRESS tells us that the connect cannot be completed immediately,
+    # but is continuing in the background.
   end
 
   socket
@@ -32,10 +34,10 @@ loop do
     begin
       socket.connect_nonblock(socket.remote_address)
     rescue Errno::EISCONN
-      # If the socket is already connected then we can count this as a success.
+      # EISCONN tells us that the socket is already connected. Count this as a success.
       puts "#{HOST}:#{socket.remote_address.ip_port} accepts connections..."
-      # Remove the socket from the list so it doesn't continue to be
-      # selected as writable.
+
+      # Remove the socket from the array so it isn't selected multiple times.
       sockets.delete(socket)
     rescue Errno::EINVAL
       sockets.delete(socket)
