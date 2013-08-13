@@ -18,4 +18,4 @@ Other than being a first version and light on features, there seems to be a limi
 Credits
 -------
 
-Uses code from <href a="https://github.com/jstorimer">jstorimer</a>.
+Uses code from [jstorimer](https://github.com/jstorimer).
