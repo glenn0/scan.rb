@@ -6,7 +6,7 @@ A nimble parallel port scanner, written in Ruby.
 Usage
 -----
 
-ruby scan.rb <hostname> <start port> <end port>
+ruby scan.rb \<hostname\> \<start port\> \<end port\>
 
 eg. ruby scan.rb scan-me.com 1 200
 
