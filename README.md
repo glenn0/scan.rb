@@ -27,7 +27,7 @@ Two valid ports, joins with a hyphen. NOTE: First port must be lower than second
 
 ruby scan.rb \<hostname\> \<1-65535\>-\<1-65535\>
 
-eg. ```ruby scan.rb scan-me.com 1-100``` (scans ports 1 to 100 inclusive)
+eg. ```ruby scan.rb scanme.com 1-100``` (scans ports 1 to 100 inclusive)
 
 #### Port List
 
@@ -35,7 +35,7 @@ A list of comma-separated, valid port numbers. Order doesn't matter. NB: Don't u
 
 ruby scan.rb \<hostname\> \<1-65535\>(,\<1-65535\>)*n
 
-eg. ```ruby scan.rb scan-me.com 80,22,443``` (scans ports 80, 22 then 443)
+eg. ```ruby scan.rb scanme.com 80,22,443``` (scans ports 80, 22 then 443)
 
 
 Issues
