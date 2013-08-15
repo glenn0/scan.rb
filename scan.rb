@@ -61,6 +61,8 @@ class PortScan
   end
 end
 
+
+
 def main
   run_scan = true
   hostname = ARGV[0]
@@ -69,6 +71,7 @@ def main
       ARGV[1].split(',').map { |x| x.to_i }
     elsif ARGV[1].include?('-')
       range_ports = ARGV[1].split('-').map { |x| x.to_i }
+      Range.new(range_ports[0], range_ports[1])
     elsif /^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$/.match(ARGV[1])
       [ARGV[1].to_i]
     else
