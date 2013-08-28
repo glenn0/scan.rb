@@ -1,7 +1,7 @@
 require 'socket'
 require 'pry'
 
-class PortScan
+class Prober
 
   # Set up the parameters.
   def initialize(hostname, sanitised_ports)
