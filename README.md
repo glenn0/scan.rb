@@ -3,6 +3,11 @@ scan.rb
 
 A nimble parallel port scanner, written in Ruby.
 
+Development Status
+------------------
+
+Scan.rb is in active but early development. Master branch should be stable for use cases specified below. Other branches are more than likely unstable.
+
 Usage
 -----
 
